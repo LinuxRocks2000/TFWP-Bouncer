@@ -1,9 +1,8 @@
 import discord
+import secrets ## Define this in your local directory with BOT_TOKEN = "[my_bot_token]"
 intents = discord.Intents.default()
 intents.members = True
 
-
-TOKEN = "NzM5OTk0MTY5NTE4NTg4MDY1.XyijRg.1K8xP0B2U_gjgsKYu7KaRcaKLi0"
 
 client = discord.Client(intents = intents)
 
@@ -61,4 +60,4 @@ async def on_message(message):
                         await x.dm_channel.send(message.content[19:])
             await message.delete()
 
-client.run(TOKEN)
+client.run(secrets.BOT_TOKEN)
